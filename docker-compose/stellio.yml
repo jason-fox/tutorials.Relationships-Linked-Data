@@ -127,6 +127,9 @@ services:
       retries: 20
       start_period: 10s
 
+  tutorial:
+    environment:
+      - "CONTEXT_BROKER=http://stellio:${STELLIO_PORT}/ngsi-ld/v1" # URL of the context broker to update context
      
 networks:
   default:
